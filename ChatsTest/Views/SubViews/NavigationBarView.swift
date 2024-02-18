@@ -21,14 +21,14 @@ struct NavigationBarView: View {
                     .scaledToFit()
                     .clipShape(Circle())
                     .frame(width: 50)
-                VStack(alignment: .leading, spacing: 5){
+                VStack(alignment: .leading){
                     Text(chat.fullName)
                         .font(.system(size: 17,
                                       weight: .bold)
                         )
                     Text("tap here for contact info")
                         .foregroundStyle(.gray)
-                        .font(.system(size: 15,
+                        .font(.system(size: 12,
                                       weight: .light))
                 }
             }

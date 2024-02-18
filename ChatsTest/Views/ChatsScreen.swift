@@ -48,7 +48,8 @@ struct ChatsScreen: View {
                     .listStyle(.plain)
                     .navigationTitle("Chats")
                     .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarItems(leading:
+                    .navigationBarItems(
+                        leading:
                                             Button {
                         print("Use backend")
                     } label: {

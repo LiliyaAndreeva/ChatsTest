@@ -24,10 +24,10 @@ struct ChatMessage: View {
                 
             } else {
                 HStack{
-                    Text("Good Morning!")
+                    Text("What is the most popular meal in Japan?")
                         .font(.subheadline)
-                        .padding()
-                        .background(Color(.systemGray5))
+                        .padding(12)
+                        .background(Color(.white))
                         .foregroundStyle(.black)
                         .clipShape(ChatFrame(isFromCurrentUser: isFromCurrentUser))
                         .frame(maxWidth: UIScreen.main.bounds.width / 1.5, alignment: .leading)
@@ -35,10 +35,10 @@ struct ChatMessage: View {
                 }
             }
         }
-        .padding(.horizontal, 8)
+        .padding(.horizontal, 3)
     }
 }
 
 #Preview {
-    ChatMessage(isFromCurrentUser: true)
+    ChatMessage(isFromCurrentUser: false)
 }

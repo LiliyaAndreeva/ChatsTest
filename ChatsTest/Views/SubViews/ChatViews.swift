@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChatViews: View {
     let chat: ChatModel
-    //let contact: ModelContactInfo
     
     var body: some View {
         HStack {

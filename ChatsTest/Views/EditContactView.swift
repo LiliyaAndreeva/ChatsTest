@@ -16,9 +16,13 @@ struct EditContactView: View {
         
         VStack{
             List{
-              
-                
+                Section(header: Text("Name")) {
+                            Text(contact.firstName)
+                            Text(contact.sureName)
+        
+                }
             }
+            .listRowInsets(EdgeInsets())
         }
     }
 }

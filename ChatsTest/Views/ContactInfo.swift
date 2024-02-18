@@ -10,6 +10,8 @@ import SwiftUI
 struct ContactInfo: View {
     let chat: ChatModel
     let contact: ModelContactInfo
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     
     
     var body: some View {
@@ -31,49 +33,72 @@ struct ContactInfo: View {
                     
                     
                     Section{
-                        // NavigationLink{ !!!! TO DO
-                        HStack(alignment: .center, spacing: 20){
-                            contact.mediaImage
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.blue)
-                            Text(contact.mediaLinksDocs)
+                        NavigationLink {
+                            MokScreen()
+                        } label: {
+                            HStack(alignment: .center, spacing: 20){
+                                contact.mediaImage
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(.blue)
+                                Text(contact.mediaLinksDocs)
+                                  Spacer()
+                                Text("12")
+                                    .foregroundStyle(.gray)
+                            }
                         }
-                        // NavigationLink{ !!!! TO DO
-                        HStack(alignment: .center, spacing: 20){
-                            contact.starredMessageImage
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.yellow)
-                            
-                            Text(contact.starredMessages)
-                            
+                        
+                        
+                        NavigationLink {
+                            MokScreen()
+                        } label: {
+                            HStack(alignment: .center, spacing: 20){
+                                contact.starredMessageImage
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(.yellow)
+                                Text(contact.starredMessages)
+                                Spacer()
+                              Text("None")
+                                    .foregroundStyle(.gray)
+                            }
                         }
-                        HStack(alignment: .center, spacing: 20){
-                            contact.chatSearchImage
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.orange)
-                            
-                            Text(contact.chatSearch)
-                            
+                        NavigationLink {
+                            MokScreen()
+                        } label: {
+                            HStack(alignment: .center, spacing: 20){
+                                contact.chatSearchImage
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(.orange)
+                                Text(contact.chatSearch)
+                            }
                         }
+                        
                     }
+                    
                     Section{
-                        HStack(alignment: .center, spacing: 20){
-                            contact.volumeImage
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.green)
-                            
-                            Text(contact.mute)
+                        NavigationLink {
+                            MokScreen()
+                        } label: {
+                            HStack(alignment: .center, spacing: 20){
+                                contact.volumeImage
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(.green)
+                                
+                                Text(contact.mute)
+                                Spacer()
+                                Text("No")
+                                    .foregroundStyle(.gray)
+                            }
                         }
                     }
                 }
                 .listSectionSpacing(.custom(25))
                 .listStyle(.grouped)
                 .navigationBarItems(trailing:
-                                        NavigationLink(destination: EditContactView(chat: chat, contact: contact), 
+                                        NavigationLink(destination: EditContactView(chat: chat, contact: contact),
                                                        label:
                                                         {
                     Text("Edit")
