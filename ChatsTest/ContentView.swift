@@ -8,17 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selected = "4"
+    var chatManager = ChatManager()
+    let contact: ModelContactInfo
+    let chat: ChatModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selected){
+            Text("Status")
+                .tag("1")
+            .tabItem {
+                Label("Status", systemImage: "circle.dashed")
+            }
+            Text("Calls")
+                .tag("2")
+            .tabItem {
+                Label("Calls", systemImage: "phone")
+            }
+            Text("Camera")
+                .tag("3")
+            .tabItem {
+                Label("Camera", systemImage: "camera")
+            }
+            ChatsScreen(contact: contact, chat: chat)
+                .tag("4")
+                .tabItem {
+                    Label("Chats", systemImage: "message" )
+                }
+            Text("Settings")
+                .tag("5")
+            .tabItem {
+                Label("Settings", systemImage: "gear")
+            }
         }
-        .padding()
+        
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(contact: ModelContactInfo.getContactInfo(chat: ChatManager().chats[4]), chat: ChatManager().chats[5])
 }
