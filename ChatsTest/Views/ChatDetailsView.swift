@@ -22,7 +22,6 @@ struct ChatDetailsView: View {
                 ForEach(0...15, id: \.self) { message in
                     ChatMessage(isFromCurrentUser: Bool.random())
                 }
-                .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(
                     trailing: NavigationBarItems(chat: chat, contact: contact )
                 )

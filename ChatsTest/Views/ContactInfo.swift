@@ -96,6 +96,8 @@ struct ContactInfo: View {
                 }
                 .listSectionSpacing(.custom(25))
                 .listStyle(.grouped)
+                .navigationTitle("Contact Info")
+                .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing:
                                         NavigationLink(destination: EditContactView(chat: chat, contact: contact),
                      label:
