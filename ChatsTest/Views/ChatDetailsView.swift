@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ChatDetailsView: View {
     @State private var massegetext = ""
+    private let withSize = CGFloat(20)
+    private let heightSize = CGFloat(20)
+    
     let chat: ChatModel
     let contact: ModelContactInfo
     
@@ -18,21 +21,17 @@ struct ChatDetailsView: View {
             VStack{
                 ForEach(0...15, id: \.self) { message in
                     ChatMessage(isFromCurrentUser: Bool.random())
-                    
                 }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarItems(
-                        trailing: NavigationBarItems(chat: chat, contact: contact )
-                    )
-                    .toolbar(.hidden, for: .tabBar)
-                    .toolbar {
-                        ToolbarItem(placement: .bottomBar) {
-                            ToolBarItems(massegetext: $massegetext, withSize: 20, heightSize: 20)
-                            //                            .frame(maxWidth: .infinity)
-                            //                            .background(Color(.systemGroupedBackground))
-                        }
-                        
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(
+                    trailing: NavigationBarItems(chat: chat, contact: contact )
+                )
+                .toolbar(.hidden, for: .tabBar)
+                .toolbar {
+                    ToolbarItem(placement: .bottomBar) {
+                        ToolBarItems(massegetext: $massegetext, withSize: withSize, heightSize: heightSize)
                     }
+                }
             }
         }
         .background(Image("wallpaperLight")
@@ -56,7 +55,6 @@ struct NavigationBarItems: View {
                 print("Use backend")
             } label: {
                 Image(systemName: "phone")
-                
             }
             Button {
                 print("Use backend")

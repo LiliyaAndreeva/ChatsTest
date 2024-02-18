@@ -26,7 +26,6 @@
 		72B66EC12B81DA8E00C49885 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B66EC02B81DA8E00C49885 /* ChatMessage.swift */; };
 		72B66EC32B81DEBD00C49885 /* ChatFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B66EC22B81DEBD00C49885 /* ChatFrame.swift */; };
 		72B66EC52B81F1D900C49885 /* MokScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B66EC42B81F1D900C49885 /* MokScreen.swift */; };
-		72B66EC72B821DE200C49885 /* ChatMassegeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B66EC62B821DE200C49885 /* ChatMassegeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +49,6 @@
 		72B66EC02B81DA8E00C49885 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		72B66EC22B81DEBD00C49885 /* ChatFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFrame.swift; sourceTree = "<group>"; };
 		72B66EC42B81F1D900C49885 /* MokScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MokScreen.swift; sourceTree = "<group>"; };
-		72B66EC62B821DE200C49885 /* ChatMassegeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMassegeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				72B66EA02B7F85F800C49885 /* ChatModel.swift */,
-				72B66EC62B821DE200C49885 /* ChatMassegeModel.swift */,
 				72B66EA22B7F876700C49885 /* ChatManager.swift */,
 				72B66EB12B80D14C00C49885 /* ModelContactInfo.swift */,
 			);
@@ -218,7 +215,6 @@
 				72B66EAE2B80817300C49885 /* NavigationBarView.swift in Sources */,
 				72B66EAA2B805F7A00C49885 /* ChatsScreen.swift in Sources */,
 				72B66EBC2B812F8C00C49885 /* EditContactView.swift in Sources */,
-				72B66EC72B821DE200C49885 /* ChatMassegeModel.swift in Sources */,
 				72B66EA32B7F876700C49885 /* ChatManager.swift in Sources */,
 				72B66E922B7F83B800C49885 /* ChatsTestApp.swift in Sources */,
 				72B66EB02B80877600C49885 /* ContactInfo.swift in Sources */,

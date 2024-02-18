@@ -34,8 +34,7 @@ struct NavigationBarView: View {
             }
         }
         .foregroundStyle(.black)
-        }
-
+    }
 }
 
 #Preview {

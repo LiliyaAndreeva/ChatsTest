@@ -10,9 +10,8 @@ import SwiftUI
 struct ContactInfo: View {
     let chat: ChatModel
     let contact: ModelContactInfo
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-    
+    private let withSize = CGFloat(30)
+    private let heightSize = CGFloat(30)
     
     var body: some View {
         GeometryReader{ geo in
@@ -39,10 +38,10 @@ struct ContactInfo: View {
                             HStack(alignment: .center, spacing: 20){
                                 contact.mediaImage
                                     .resizable()
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: withSize, height: heightSize)
                                     .foregroundStyle(.blue)
                                 Text(contact.mediaLinksDocs)
-                                  Spacer()
+                                Spacer()
                                 Text("12")
                                     .foregroundStyle(.gray)
                             }
@@ -55,11 +54,11 @@ struct ContactInfo: View {
                             HStack(alignment: .center, spacing: 20){
                                 contact.starredMessageImage
                                     .resizable()
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: withSize, height: heightSize)
                                     .foregroundStyle(.yellow)
                                 Text(contact.starredMessages)
                                 Spacer()
-                              Text("None")
+                                Text("None")
                                     .foregroundStyle(.gray)
                             }
                         }
@@ -69,7 +68,7 @@ struct ContactInfo: View {
                             HStack(alignment: .center, spacing: 20){
                                 contact.chatSearchImage
                                     .resizable()
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: withSize, height: heightSize)
                                     .foregroundStyle(.orange)
                                 Text(contact.chatSearch)
                             }
@@ -84,7 +83,7 @@ struct ContactInfo: View {
                             HStack(alignment: .center, spacing: 20){
                                 contact.volumeImage
                                     .resizable()
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: withSize, height: heightSize)
                                     .foregroundStyle(.green)
                                 
                                 Text(contact.mute)
@@ -99,12 +98,11 @@ struct ContactInfo: View {
                 .listStyle(.grouped)
                 .navigationBarItems(trailing:
                                         NavigationLink(destination: EditContactView(chat: chat, contact: contact),
-                                                       label:
-                                                        {
+                     label:
+                   {
                     Text("Edit")
                 }
-                                                       
-                                                      )
+                        )
                 )
             }
         }

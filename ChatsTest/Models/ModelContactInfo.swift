@@ -48,7 +48,6 @@ struct ModelContactInfo: Identifiable {
             starredMessageImage: Image(systemName: "star.fill"),
             starredMessages: "Starred Messages",
             chatSearchImage: Image(systemName: "magnifyingglass"),
-            
             chatSearch: "Chat Search",
             volumeImage: Image(systemName: "speaker.wave.2.fill"),
             mute: "Mute")

@@ -41,9 +41,7 @@ struct ToolBarItems: View {
                         .rotationEffect(.degrees(90))
                 }
                 .padding(.trailing, 5)
-                
             }
-            
             
             Button {
                 print("Use back")
@@ -58,8 +56,7 @@ struct ToolBarItems: View {
                 Image(systemName: "mic")
                     .resizable()
                     .frame(width: withSize, height: heightSize)
-            }
-            
+            } 
         }
     }
 }
