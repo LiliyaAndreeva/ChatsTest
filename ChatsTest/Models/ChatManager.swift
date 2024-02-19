@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-final class ChatManager: ObservableObject {
+final class ChatManager {
     
-    @Published var chats: [ChatModel] = [
+    let chats: [ChatModel] = [
         ChatModel(firstName: "Andrew", sureName: "Parker", message: "What kind of strategy is better?", date: "11/16/19", image: "Andrew Parker", icon: Image(systemName: "checkmark"), iconColor: .blue ),
         ChatModel(firstName: "Caren", sureName: "Castillo", message: "0:14", date: "11/15/19", image: "Caren Castillo", icon: Image(systemName: "mic.fill"), iconColor: .green),
         ChatModel(firstName: "Maximillian", sureName: "Jacobson", message: "Bro, I have a good idea!", date: "10/30/19", image: "Maximillian Jacobson", icon: Image(systemName: "checkmark"), iconColor: .blue ),
