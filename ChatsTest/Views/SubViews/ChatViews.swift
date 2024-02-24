@@ -32,7 +32,7 @@ struct ChatViews: View {
                     
                     chat.icon?
                         .resizable()
-                        .frame(width: 13, height: 17)
+                        .frame(width: 20, height: 17)
                         .foregroundStyle(chat.iconColor ?? .gray)
                     Text(chat.message)
                         .foregroundStyle(.gray)
@@ -47,5 +47,5 @@ struct ChatViews: View {
 }
 
 #Preview {
-    ChatViews(chat: ChatManager().chats[0])
+    ChatViews(chat: ChatManager().chats[3])
 }
